@@ -1,7 +1,53 @@
+
+### signup
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "112@gmail.com",
+    "email": "test2@gmail.com",
     "password": "12345678"
 }
+
+### signin
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "12345678"
+}
+
+### get current user
+GET http://localhost:3000/auth/me
+
+### signout
+POST http://localhost:3000/auth/signout
+
+
+### get all users
+GET http://localhost:3000/auth/users
+
+### get user by id
+GET http://localhost:3000/auth/2
+
+
+### get user by email
+GET http://localhost:3000/auth?email=1111@gmail.com
+
+### update user
+PATCH http://localhost:3000/auth/4
+content-type: application/json
+
+{
+    "email": "5@gmail.com"
+}
+
+### delete user
+DELETE http://localhost:3000/auth/321312
+
+
+### get color
+GET http://localhost:3000/auth/color/blue
+
+### get color by id
+GET http://localhost:3000/auth/color
