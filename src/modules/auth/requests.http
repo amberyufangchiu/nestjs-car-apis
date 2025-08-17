@@ -1,0 +1,39 @@
+
+### signup
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "test6@gmail.com",
+    "password": "12345678"
+}
+
+### request OTP
+POST http://localhost:3000/auth/email/otp
+content-type: application/json
+
+{
+    "email": "test1@gmail.com"
+}
+
+### verify OTP & sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "otp": "259317"
+}
+
+### refresh token
+POST http://localhost:3000/refresh-token
+Content-Type: application/json
+x-csrf-token: um26ckv356g
+
+### get current user
+GET http://localhost:3000/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInN1YiI6IjIiLCJpYXQiOjE3NTM2NjA2OTgsImV4cCI6MTc1MzY2MDk5OH0.9EUPFi4LaMTw0Z7y28Wb7VotoCStDWUnp4c1B8iUaHQ
+
+### signout
+POST http://localhost:3000/auth/signout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInN1YiI6IjIiLCJpYXQiOjE3NTM2NjA2OTgsImV4cCI6MTc1MzY2MDk5OH0.9EUPFi4LaMTw0Z7y28Wb7VotoCStDWUnp4c1B8iUaHQ
